@@ -2,9 +2,10 @@ import { DynamicModule, Module } from '@nestjs/common';
 import { RepositoriesModule } from '../repositories/repositories.module';
 import { ArticleRepository } from '../repositories/article.repository';
 import { UseCaseProxy } from './usecase.proxy';
-import { GetAllArticlesUseCase } from '../../application/usecases/GetAllArticles.usecase';
-import { CreateArticleUseCase } from '../../application/usecases/CreateArticle.usecase';
-import { UpdateArticleUseCase } from '../../application/usecases/UpdateArticle.usecase';
+import { GetAllArticlesUseCase } from '../../application/usecases/article/GetAllArticles.usecase';
+import { CreateArticleUseCase } from '../../application/usecases/article/CreateArticle.usecase';
+import { UpdateArticleUseCase } from '../../application/usecases/article/UpdateArticle.usecase';
+import { ArticleFactory } from '../../application/usecases/article/article.factory';
 
 @Module({
   imports: [RepositoriesModule],

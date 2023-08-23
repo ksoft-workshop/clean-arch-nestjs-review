@@ -1,5 +1,5 @@
-import { ArticleRepository } from '../../infrastructures/repositories/article.repository';
-import { ArticleModel } from '../../domain/model/Article.model';
+import { ArticleRepository } from '../../../infrastructures/repositories/article.repository';
+import { ArticleModel } from '../../../domain/model/Article.model';
 
 export class UpdateArticleUseCase {
   constructor(private readonly articleRepos: ArticleRepository) {}
