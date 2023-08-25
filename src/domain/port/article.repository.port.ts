@@ -1,6 +1,6 @@
 import { ArticleModel } from '../model/Article.model';
 
-export interface ArticleRepositoryInterface {
+export interface ArticleRepositoryPort {
   create(data: ArticleModel): Promise<ArticleModel>;
   findAll(): Promise<ArticleModel[]>;
   findById(id: number): Promise<ArticleModel>;

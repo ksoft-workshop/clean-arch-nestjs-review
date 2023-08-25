@@ -1,10 +1,10 @@
-import { ArticleRepositoryInterface } from '../../domain/port/article.repository.interface';
+import { ArticleRepositoryPort } from '../../domain/port/article.repository.port';
 import { ArticleModel } from '../../domain/model/Article.model';
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma/prisma.service';
 
 @Injectable()
-export class ArticleRepository implements ArticleRepositoryInterface {
+export class ArticleRepositoryAdapter implements ArticleRepositoryPort {
   constructor(private prisma: PrismaService) {}
   create(article: ArticleModel): Promise<ArticleModel> {
     return this.prisma.article.create({ data: article });

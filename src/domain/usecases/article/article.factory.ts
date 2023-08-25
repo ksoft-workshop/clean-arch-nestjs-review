@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { CreateArticleDto } from '../../dtos/createArticle.dto';
-import { ArticleModel } from '../../../domain/model/Article.model';
-import { UpdateArticleDto } from '../../dtos/updateArticle.dto';
+import { CreateArticleDto } from '../../../infrastructures/dtos/createArticle.dto';
+import { ArticleModel } from '../../model/Article.model';
+import { UpdateArticleDto } from '../../../infrastructures/dtos/updateArticle.dto';
 
 @Injectable()
 export class ArticleFactory {
@@ -22,4 +22,5 @@ export class ArticleFactory {
 
     return article;
   }
+  
 }

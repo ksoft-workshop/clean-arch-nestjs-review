@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { ArticleRepository } from './article.repository';
+import { ArticleRepositoryAdapter } from './article.repository.adapter';
 import { PrismaModule } from '../prisma/prisma/prisma.module';
 
 @Module({
   imports: [PrismaModule],
-  providers: [ArticleRepository],
-  exports: [ArticleRepository],
+  providers: [ArticleRepositoryAdapter],
+  exports: [ArticleRepositoryAdapter],
 })
 export class RepositoriesModule {}
